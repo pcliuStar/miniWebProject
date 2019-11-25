@@ -15,3 +15,6 @@
 <!--主要配置的内容：小程序及其页面是否允许被微信索引-->
 
 <!--5.全局配置app.json：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html-->
+<!--除了先创建目录再创建文件的这种方式以外，可以在app.json里面直接编写文件路径保存时会自动创建："pages/profile/profile"-->
+
+<!--6.页面配置page.json-->
