@@ -1,0 +1,27 @@
+<!--pages/button/button.wxml-->
+<!----参考网站：https://developers.weixin.qq.com/miniprogram/dev/component/button.html-->
+
+
+<!--1.基本使用-->
+<button>按钮</button>
+
+<!--2.size属性：改变按钮的大小  取值为：default和mini-->
+<button size='mini'>按钮</button>
+<button size='mini'>按钮</button>
+
+<!--3.type属性：改变按钮的样式  取值为：default primary和warn-->
+<button size='mini' type='default'>白色按钮</button>
+<button size='mini' type='primary'>绿色按钮</button>
+<button size='mini' type='warn'>红色按钮</button>
+
+<!--4.plain属性：按钮是否镂空  默认值为false-->
+<button size='mini' plain>镂空按钮</button>
+
+<!--5.disabled属性：按钮是否禁用  默认值为false-->
+<button size='mini' disabled>禁用按钮</button>
+
+<!--6.loading属性：名称前是否带loading图标    默认值为false-->
+<button size='mini' loading>图标按钮</button>
+
+<!--7.hover-class属性：指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果-->
+<button hover-class='pressed'>按钮</button>

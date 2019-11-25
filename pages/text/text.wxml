@@ -1,0 +1,26 @@
+<!--pages/text/text.wxml-->
+<!--参考网站：https://developers.weixin.qq.com/miniprogram/dev/component/text.html-->
+
+
+<!--1.基本使用：相当于行内元素-->
+<text>Hello World</text>
+<text>你好，小程序\n</text>
+
+<!--2.换行使用-->
+<text>我需要换行\n</text>
+
+<!--3.selectable属性：文本值是否可选，默认值为false-->
+<!--默认情况下：text当中的文本长按是不可以选中的-->
+<text selectable='{{true}}'>你可以在手机上选中文字\n</text>
+<!--另外一种写法-->
+<text selectable>你可以在手机上选中文字\n</text>
+
+<!--4.space属性：显示文本空格的大小-->
+<text>字体的默认文 本空格\n</text>
+<text space='nbsp'>根据字体设置 的空格大小\n</text>
+<text space='emsp'>中文字符空格 一个大小\n</text>
+<text space='ensp'>中文字符空格 一半大小\n</text>
+
+<!--5.decode属性：是否解码文本，默认值为false-->
+<text>5 &gt; 3\n</text>
+<text decode>5 &gt; 3\n</text>

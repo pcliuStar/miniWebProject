@@ -1,0 +1,26 @@
+/* pages/view/view.wxss */
+.box{
+  background-color: red;
+}
+
+.boxM{
+  background-color: purple;
+  width: 100px;
+  height: 100px;
+}
+
+.boxC{
+  background-color: orange;
+  font-size: 30px;
+}
+
+.boxA{
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.boxA-hover{
+  background-color: green;
+}

@@ -1,0 +1,22 @@
+<!--pages/view/view.wxml-->
+<!--参考网站：https://developers.weixin.qq.com/miniprogram/dev/component/view.html-->
+
+<!--1.基本使用：相当于一个容器  块级元素，独占一行-->
+<view class='box'>你好啊</view>
+<view>刘文明</view>
+
+<!--2.hover-class属性：    指定按下去的样式类。当 hover-class="none" 时，没有点击态效果  默认值为none-->
+<view class='boxM' hover-class='boxC' hover-stay-time='{{0}}'>
+  boxM
+</view>
+
+<!--3.hover-start-time属性： 按住后多久出现点击态，单位毫秒      默认值为50毫秒-->
+
+<!--4.hover-stay-time属性：  手指松开后点击态保留时间，单位毫秒  默认值为400毫秒-->
+
+<!--5.hover-stop-propagation属性: 指定是否阻止本节点的祖先节点出现点击态  默认值为false-->
+<view class='boxA' hover-class='boxA-hover'>
+  <view class='boxM' hover-class='boxC' hover-stay-time='{{0}}' hover-stop-propagation>
+    boxM
+  </view>
+</view>

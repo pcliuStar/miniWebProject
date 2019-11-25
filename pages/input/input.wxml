@@ -1,0 +1,22 @@
+<!--pages/input/input.wxml-->
+<!--参考网站：https://developers.weixin.qq.com/miniprogram/dev/component/input.html-->
+
+
+<!--1. input组件基本使用-->
+<input />
+
+<!--2. value属性:输入框的初始内容-->
+<input value='我是初始值'/>
+
+<!--3. type属性:决定键盘的类型,取值类型  text:文本键盘|number:数字输入键盘|idcard:身份证输入键盘|digit:带小数点的数字键盘-->
+<!--可以进行预览测试-->
+<input value='我是身份证输入键盘' type='idcard'/>
+
+<!--4. password属性：是否是密码类型   默认值为false-->
+<input value='我是密码字段' password/>
+
+<!--5. placeholder属性：输入框为空时占位符-->
+<input placeholder='请输入内容'/>
+
+<!--6. input绑定事件-->
+<input bindinput='handlerInput' bindfocus='handlerFocus' bindblur='handlerBlur'/>

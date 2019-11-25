@@ -1,0 +1,15 @@
+<!--pages/image/image.wxml-->
+<!--参考网站：https://developers.weixin.qq.com/miniprogram/dev/component/image.html-->
+<!--注意点：
+      1. image组件可以写成单标签，也可以写成双标签
+      2. image组件有默认的大小320*240
+      3. image组件属于行内块级元素inline-block-->
+
+<!--1.基本使用：src可以使用本地地址，也可以使用网络地址-->
+<image src='../../assets/image/timg.jpg'/>
+<image src='/assets/image/timg.jpg'/>
+<image src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'/>
+
+<!--2.关于src属性的补充：选中相册当中的图片-->
+<button bindtap='handlerChooseImage'>选中图片</button>
+<image src='{{imagePath}}'/>
