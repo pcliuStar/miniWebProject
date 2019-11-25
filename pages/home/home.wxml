@@ -1,3 +1,17 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello World</text>
-<button size='mini'>按钮</button>
+<!--1.小程序的数据绑定: 双大括号语法-->
+<view>Hello World {{name}}</view>
+<view>我的年龄：{{age + 2}}岁</view>
+
+<!--2.小程序的列表展示：wx:for-->
+<view wx:for="{{students}}">{{item.name}}---{{item.age}}</view>
+
+<!--3.小程序的事件监听：改变data-->
+<view>当前计数：{{count}}</view>
+<button size='mini' bindtap='handleSumClick'>+</button>
+<button size='mini' bindtap='handleMulClick'>-</button>
+
+<!--4.关于sitemap的配置：参考网站https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html-->
+<!--主要配置的内容：小程序及其页面是否允许被微信索引-->
+
+<!--5.全局配置app.json：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html-->
