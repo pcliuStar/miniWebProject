@@ -1,0 +1,4 @@
+/* components/cpn/cpn.wxss */
+.box{
+  background: orange;
+}

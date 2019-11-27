@@ -1,3 +1,9 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello World</text>
-<button size='mini'>按钮</button>
+<text class='title'>Hello world</text>
+<!----------------1.使用自定义组件---------------->
+<my-cpn></my-cpn>
+
+<!----------------2.自定义组件样式细节---------------->
+<!--在自定义组件当中定义的样式title不会在当前的主页面产生任何影响，即第二行class='title'会正常显示-->
+<!--在主页面设置的样式同样也不会影响组件内部的样式: 在home.wxss当中设置了基本样式-->
+<style-cpn></style-cpn>
