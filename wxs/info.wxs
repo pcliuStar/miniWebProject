@@ -1,0 +1,15 @@
+/*定义变量*/
+var message = "Hello World";
+var name = "pcliu";
+
+/*定义函数*/
+var sum = function (num1, num2) {
+  return num1 + num2
+}
+
+/*模块化导出*/
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+}

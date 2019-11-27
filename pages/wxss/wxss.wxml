@@ -1,0 +1,22 @@
+<!--pages/wxss/wxss.wxml-->
+
+<!--第一种：行内样式|内联样式-->
+<view style='color: red; font-size: 32px;'>哈哈哈</view>
+
+<!--第二种：页内样式-->
+<view class='box'>呵呵呵</view>
+
+<!--第三种：全局样式-->
+<view class='container'>嘿嘿嘿</view>
+
+<!--注意点：如果三种样式作用于同一个组件-->
+<!--行内样式 > 页内样式 > 全局样式-->
+<view style='background: red;' class='content'>嘻嘻嘻</view>
+
+<!--wxss当中的单位：rpx    在iphone6的手机里1px=2rpx-->
+<view class='box1'>单位测试</view>
+<view class='box2'>单位测试</view>
+
+<view class='content1'>哈哈哈</view>
+<view class='content2'>呵呵呵</view>
+<button class='btn'>按钮</button>

@@ -1,0 +1,102 @@
+<!--pages/wxml/wxml.wxml-->
+<!--
+  1.WXML的基本格式：
+      类似于HTML代码：比如可以写成单标签，也可以写成双标签
+      必须有严格的闭合：没有闭合会导致编译错误
+      大写写字母敏感：class和Class是不同的属性  
+-->
+
+
+<!-------------------2.Mustache语法的基本使用------------->
+<view>{{message}}</view>
+<!--字符串拼接-->
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName + " " +lastName}}</view>
+<!--三元运算符-->
+<view>{{age>18 ? "成年人" : "未成年人"}}</view>
+<!--动态时间显示-->
+<view>当前时间：{{nowTime}}</view>
+<!--动态改变类属性-->
+<button size='mini' bindtap='handlerChangeColor'>改变颜色</button>
+<view class='box {{isActive ? "active" : ""}}'>哈哈哈</view>
+
+
+
+<!-------------------3.条件判断------------------>
+<!--wx:if的使用-->
+<button size='mini' bindtap='handlerSwitch'>切换显示</button>
+<view wx:if="{{isShow}}">我要不要显示呢？</view>
+
+<!--wx:else和wx:elif的使用-->
+<button size='mini' bindtap='handlerIncrementScore'>分数递增6</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else="{{score < 60}}">不及格</view>
+
+
+
+<!-------------------4.hidden属性的使用------------------>
+<view hidden='{{true}}'>我是hiddle属性控制的内容</view>
+
+<!--wx:if与hidden在隐藏组件时有什么区别
+    查看源码可以发现：
+      hidden：将一个组件隐藏时，但是该组件依然存在（display：none）
+      wx:if： 将一个组件隐藏时，该组件根本不存在（压根没有创建）
+    如何进行选择：
+      如果显示和隐藏的切换频率非常高，选择使用hidden
+      如果显示和隐藏的切换频率非常低，选择使用wx:if
+-->
+<view>-------------------------------------</view>
+<view hidden='{{true}}'>我是hiddle控制的内容</view>
+<view wx:if='{{false}}'>我是wx:if控制的内容</view>
+
+
+<!-------------------5.wx-for的使用------------------->
+<view>-----------------------------------------</view>
+<!--遍历一个数组-->
+<view wx:for="{{['abc', 'cba', 'nba']}}">{{item}}---{{index}}</view>
+<!--遍历一个字符串-->
+<view wx:for="{{'刘文明'}}">{{item}}</view>
+<!--遍历数字-->
+<view wx:for="{{3}}">{{item}}</view>
+
+
+<!------------------6.block标签的使用----------------->
+<view>-----------------------------------------</view>
+<block wx:if="{{isShow}}">
+  <button>我是按钮</button>
+  <view>我是显示内容</view>
+  <text>我是文字内容</text>
+</block>
+<block wx:for="{{2}}">
+  <button>我是按钮</button>
+  <view>我是显示内容</view>
+  <text>我是文字内容</text>
+</block>
+
+
+<!------------------7.item和index起名字--------------->
+<view>-----------------------------------------</view>
+<!--基本使用-->
+<view wx:for="{{movies}}">{{item}}</view>
+<!--item别名使用-->
+<view wx:for="{{movies}}" wx:for-item="movie">{{movie}}</view>
+<!--index别名使用-->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}}---{{i}}</view>
+
+
+<!----------------8.多层遍历的使用---------------------->
+<!--别名的命名之间不可以使用-连接-->
+<block wx:for="{{numbers}}" wx:for-item="innerNums">
+  <block wx:for="{{innerNums}}">
+    <view>{{item}}</view>
+  </block>
+</block>
+
+
+<!----------------9.列表渲染-key的使用------------------->
+<view wx:for="{{letters}}">{{item}}</view>
+
+
+<!----------------10.模板template的使用------------------->

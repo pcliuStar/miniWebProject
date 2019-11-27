@@ -1,0 +1,47 @@
+<!--pages/wxs/wxs.wxml-->
+
+<!--------------在wxml当中不可以直接调用Page和Component当中定义的函数---------------------------->
+<!--错误的写法-->
+<!--<view>{{25.6666.toFixed(2)}}</view>-->
+
+<!--不可以直接调用函数-->
+<!--<view>{{numberToFixed(25.6666)}}</view>-->
+
+
+
+<!---------------------------------------wxs的定义方式--------------------------------------->
+<!--第一种方式：直接在wxml当中定义-->
+<!--<wxs module="info">
+  /*定义变量*/
+  var message = "Hello World";
+  var name = "pcliu";
+
+  /*定义函数*/
+  var sum = function (num1, num2) {
+    return num1 + num2
+  }
+
+  /*模块化导出*/
+  module.exports = {
+    message: message,
+    name: name,
+    sum: sum
+  }
+</wxs>-->
+
+
+<!--第二种方式：定义在单独的wxs文件当中，再使用wxs标签进行导入-->
+<!--不可以使用绝对路径，只可以使用相对路径-->
+<wxs src="../../wxs/info.wxs" module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(20, 30)}}</view>
+
+
+
+
+<!---------------------------------------wxs的应用案例--------------------------------------->
+<view>{{price}}</view>
+
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{format.priceFormat(price, 3)}}</view>
