@@ -1,3 +1,28 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello World</text>
-<button size='mini'>按钮</button>
+<!--1. 通过navigator进行页面跳转-->
+<navigator url="/pages/detail/detail">跳到详情页面</navigator>
+
+
+<!--2. navigator属性：open-type-->
+<navigator url="/pages/detail/detail" open-type='redirect'>
+  跳到详情页面(redierct)
+</navigator>
+
+<navigator url="/pages/about/about" open-type='switchTab'>
+  跳到关于页面(switchTab)
+</navigator>
+
+<navigator url="/pages/detail/detail" open-type='reLaunch'>
+  跳到详情页面(reLaunch)
+</navigator>
+
+
+<!--3. 跳转到其它页面过程中传递数据-->
+<!--传递的数据可以在detail的JS文件当中获取-->
+<navigator url="/pages/detail/detail?name=pcliu&age=18&height=1.88">跳转到其它页面过程中传递数据</navigator>
+
+<view>{{title}}</view>
+
+
+<!--4.通过代码的跳转与返回-->
+<button bindtap='handlePushDeatil'>代码跳转到详情页</button>

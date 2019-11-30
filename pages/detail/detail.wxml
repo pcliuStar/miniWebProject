@@ -1,0 +1,14 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+
+<!--多层级跳转-->
+<navigator url='/pages/comment/comment'>跳转到评论页</navigator>
+
+<!--返回到首页面-->
+<navigator open-type='navigateBack'>返回</navigator>
+
+
+
+
+<button bindtap='handleBackHome'>代码返回到首页面</button>

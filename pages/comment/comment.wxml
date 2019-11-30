@@ -1,0 +1,6 @@
+<!--pages/comment/comment.wxml-->
+<text>pages/comment/comment.wxml</text>
+
+
+<!--多层级返回到首页面-->
+<navigator open-type='navigateBack' delta='2'>返回首页面</navigator>
